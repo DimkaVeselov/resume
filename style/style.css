@@ -3,6 +3,9 @@
 	margin: 0 auto;
 	padding: 0;
 	font-family: 'montserrat', sans-serif;
+	list-style: none;
+	text-decoration: none;
+	color: #000;
 }
 
 .wrap {
@@ -42,7 +45,6 @@
 .link-contact {
 	display: flex;
 	justify-content: space-around;
-	list-style: none;
 }
 
 li {
@@ -51,15 +53,25 @@ li {
 	padding-right: 5px;
 }
 
-li img {
+.link-contact li img {
 	width: 100%;
 	padding-right: 20px;
-	opacity: .5;
 }
 
-li img:hover {
-	opacity: 1;
-	margin: 3px;
+@keyframes shake {
+	0%, 50%, 100% {
+		transform: rotate(0deg);
+	}
+	10%, 30% {
+		transform: rotate(-10deg);
+	}
+	20%, 40% {
+		transform: rotate(10deg);
+	}
+}
+
+.link-contact li img:hover {
+	animation: shake 1.2s ease-in-out;
 }
 
 .aboutMe h2 {
@@ -95,20 +107,53 @@ li img:hover {
 }
 
 figure img,
-figure p,
 figure figcaption {
-	padding-bottom: 30px;
 	width: 100%;
+	padding-bottom: 20px;
+}
+
+figure .btn {
+	width: 200px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.25em;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+figure .btn::after {
+	content: "";
+	background-color: rgb(199, 199, 199);
+	border-radius: 50%;
+	transition: width 1s easy, height 1s easy;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
+	height: 0px;
+	width: 0px;
+	z-index: 1;
+}
+
+figure .btn:hover:after {
+	width: 200px;
+	height: 200px;
 }
 
 figure p {
 	font-size: 1.5em;
 	font-weight: 500;
 	text-align: center;
+	padding-top: 15px;
 }
 
 figure figcaption {
 	font-size: 1em;
+	padding: 15px 0 30px 0;
 	text-align: center;
 }
 
@@ -133,4 +178,60 @@ figure figcaption {
 	border-bottom: 5px solid #c7c7c7;
 	padding: 10px 0 7px 0;
 	border-bottom: 1px solid #c7c7c7;
+}
+
+.education li {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	padding: 30px 15px;
+}
+
+.education li img {
+	width: auto;
+	padding-bottom: 25px;
+
+}
+
+.education li h3 {
+	text-align: center;
+	font-weight: bold;
+}
+
+.education li p {
+	text-align: center;
+	width: 80%;
+}
+
+.skills h2{
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 5px solid #c7c7c7;
+	padding: 10px 0 7px 0;
+	border-bottom: 1px solid #c7c7c7;
+}
+
+.skills ul {
+	display: grid;
+	grid-template-columns: 20em 20em;
+	grid-template-rows: 27em 27em;
+	width: 70%;
+	margin: 0 auto;
+	padding: 35px 0 30px;
+}
+
+.skills ul li {
+	width: auto;
+}
+
+.skills ul li img {
+	width: 300px;
+}
+
+footer {
+	text-align: center;
+	text-transform: uppercase;
+	border-top: 5px solid #c7c7c7;
+	padding: 25px 0 25px 0;
 }
