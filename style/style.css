@@ -51,14 +51,13 @@
 }
 
 li {
-	width: 65px;
-	height: 65px;
+	width: 50px;
+	height: 55px;
 	padding-right: 5px;
 }
 
 .link-contact li img {
-	width: 100%;
-	padding-right: 20px;
+	width: auto;
 }
 
 @keyframes shake {
@@ -208,15 +207,17 @@ figure figcaption {
 }
 
 .skills ul {
-	display: grid;
-	grid-template-columns: 19em 19em;
-	grid-template-rows: 27em 27em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 	width: 70%;
 	padding: 35px 0 30px;
 }
 
 .skills ul li {
 	width: auto;
+	height: auto;
 }
 
 .skills ul li img {
@@ -236,14 +237,6 @@ footer {
 		width: 35%;
 	}
 
-	.link-contact {
-		width: 100%;
-	}
-
-	.link-contact li img {
-		padding: 10px;
-	}
-
 	.swiper-button-prev::after,
 	.swiper-button-next::after {
 		display: none;
@@ -251,20 +244,10 @@ footer {
 
 
 	.skills ul {
-		height: 159vh;
-		grid-template-columns: none;
 		width: auto;
 	}
 
 	.skills ul li img {
 		width: 230px;
-	}
-}
-
-@media screen and (max-width: 615px) {
-	
-	.skills ul {
-		height: 167vh;
-		grid-template-rows: 21em 21em;
 	}
 }
