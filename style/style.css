@@ -31,18 +31,21 @@
 }
 
 .header h1 {
+	text-align: center;
 	font-size: 2em;
 	font-weight: bold;
 	margin-bottom: 10px;
 }
 
 .header h3 {
+	text-align: center;
 	font-size: 1.5em;
 	font-weight: 500;
 	margin-bottom: 25px;
 }
 
 .link-contact {
+	width: auto;
 	display: flex;
 	justify-content: space-around;
 }
@@ -104,6 +107,8 @@ li {
 
 .swiper-slide figure {
 	max-width: 650px;
+	display: flex;
+	flex-direction: column;
 }
 
 figure img,
@@ -112,37 +117,27 @@ figure figcaption {
 	padding-bottom: 20px;
 }
 
-figure .btn {
-	width: 200px;
-	text-align: center;
-	text-transform: uppercase;
-	padding: 10px 20px;
-	border: none;
-	border-radius: 5px;
-	font-size: 1.25em;
-	cursor: pointer;
+figure a button {
+	width: 100%;
 	position: relative;
+	text-transform: uppercase;
+	padding: 7px 25px;
+	border: 1px solid #c7c7c7;
+	background: none;
+	border-radius: 5px;
+	font-size: 1em;
+	cursor: pointer;
 	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
 }
 
-figure .btn::after {
-	content: "";
-	background-color: rgb(199, 199, 199);
-	border-radius: 50%;
-	transition: width 1s easy, height 1s easy;
-	position: absolute;
-	top: 0;
-	left: 0;
-	transform: translate(-50%, -50%);
-	height: 0px;
-	width: 0px;
-	z-index: 1;
+figure a button:hover,
+figure a button:focus {
+	top: 4px;
+	box-shadow: 0 2px 6px 0 rgba(152, 160, 180, 10);
 }
 
-figure .btn:hover:after {
-	width: 200px;
-	height: 200px;
-}
+
 
 figure p {
 	font-size: 1.5em;
@@ -214,10 +209,9 @@ figure figcaption {
 
 .skills ul {
 	display: grid;
-	grid-template-columns: 20em 20em;
+	grid-template-columns: 19em 19em;
 	grid-template-rows: 27em 27em;
 	width: 70%;
-	margin: 0 auto;
 	padding: 35px 0 30px;
 }
 
@@ -234,4 +228,43 @@ footer {
 	text-transform: uppercase;
 	border-top: 5px solid #c7c7c7;
 	padding: 25px 0 25px 0;
+}
+
+@media screen and (max-width: 815px) {
+
+	.photo-avatar {
+		width: 35%;
+	}
+
+	.link-contact {
+		width: 100%;
+	}
+
+	.link-contact li img {
+		padding: 10px;
+	}
+
+	.swiper-button-prev::after,
+	.swiper-button-next::after {
+		display: none;
+	}
+
+
+	.skills ul {
+		height: 159vh;
+		grid-template-columns: none;
+		width: auto;
+	}
+
+	.skills ul li img {
+		width: 230px;
+	}
+}
+
+@media screen and (max-width: 615px) {
+	
+	.skills ul {
+		height: 167vh;
+		grid-template-rows: 21em 21em;
+	}
 }
