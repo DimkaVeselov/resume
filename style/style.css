@@ -3,7 +3,6 @@
 	margin: 0 auto;
 	padding: 0;
 	font-family: 'montserrat', sans-serif;
-	list-style: none;
 	text-decoration: none;
 	color: #000;
 }
@@ -47,6 +46,7 @@
 	display: flex;
 	justify-content: space-around;
 	padding-bottom: 10px;
+	list-style: none;
 }
 
 li {
@@ -132,8 +132,6 @@ figure a button:focus {
 	box-shadow: 0 2px 6px 0 rgba(152, 160, 180, 10);
 }
 
-
-
 figure p {
 	font-size: 1.5em;
 	font-weight: 500;
@@ -175,6 +173,21 @@ figure figcaption {
 	padding: 30px 15px;
 }
 
+.education li div p {
+	width: 100%;
+	text-align: left;
+	padding: 15px;
+}
+
+.education div ul{
+	width: 76%;
+}
+
+.education li li {
+	padding: 0 0 8px 0;
+	text-align: left;
+}
+
 .education li img {
 	width: auto;
 	padding-bottom: 25px;
@@ -204,6 +217,7 @@ figure figcaption {
 	flex-wrap: wrap;
 	justify-content: space-evenly;
 	width: 70%;
+	list-style: none;
 	padding: 35px 0 30px;
 }
 
@@ -232,7 +246,6 @@ footer {
 	.swiper-button-next::after {
 		display: none;
 	}
-
 
 	.skills ul {
 		width: 65%;
