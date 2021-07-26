@@ -60,13 +60,20 @@ li {
 }
 
 @keyframes shake {
-	0%, 50%, 100% {
+
+	0%,
+	50%,
+	100% {
 		transform: rotate(0deg);
 	}
-	10%, 30% {
+
+	10%,
+	30% {
 		transform: rotate(-10deg);
 	}
-	20%, 40% {
+
+	20%,
+	40% {
 		transform: rotate(10deg);
 	}
 }
@@ -149,7 +156,7 @@ figure figcaption {
 	font-size: 35px;
 }
 
-.swiper-container-horizontal > .swiper-pagination-bullets {
+.swiper-container-horizontal>.swiper-pagination-bullets {
 	bottom: 0;
 }
 
@@ -157,7 +164,7 @@ figure figcaption {
 	background: #000;
 }
 
-.education h2{
+.education h2 {
 	text-transform: uppercase;
 	border-top: 5px solid #c7c7c7;
 	border-bottom: 5px solid #c7c7c7;
@@ -179,7 +186,7 @@ figure figcaption {
 	padding: 15px;
 }
 
-.education div ul{
+.education div ul {
 	width: 76%;
 }
 
@@ -203,7 +210,7 @@ figure figcaption {
 	width: 80%;
 }
 
-.skills h2{
+.skills h2 {
 	text-align: center;
 	text-transform: uppercase;
 	border-top: 5px solid #c7c7c7;
